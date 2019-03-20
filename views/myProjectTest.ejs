@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>Test</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- W3.css -->
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+	<!-- Local Prettify library -->
+	<link rel="stylesheet" type="text/css" href="prettify.css">
+	<link rel="stylesheet" type="text/css" href="skins/sons-of-obsidian.css">
+	<style>
+		li.L0, li.L1, li.L2, li.L3, li.L4,
+		li.L5, li.L6, li.L7, li.L8, li.L9 {
+		    list-style-type: decimal;
+		}
+/*		#demo {
+			display: none;
+		}*/
+		.pick {
+			color: red;
+		}
+/*		.nav_left {
+			width: 12%;
+			position: fixed;
+			z-index: 1;
+			top: 0;
+			left: 0;
+			overflow: auto;
+			padding-top: 20px;
+			height: 100%;
+		}
+		.nav_left li {
+			padding: 0;
+			margin-bottom: 0;
+			display: block;		
+		}*/
+		.w3-sidebar {
+			overflow-x: hidden;
+
+		}
+		ul, li {
+			padding: 0 0 2px 0px;
+			margin: 0;
+		}
+		.printed {
+			margin-left: 20px;
+		}
+		.w3-container {
+			margin-left: 250px;
+		}
+		.upload_div {
+			margin-bottom: 10px;
+		}
+	</style>
+
+</head>
+<body onload="PR.prettyPrint()">
+	<div class="w3-sidebar w3-light-grey w3-bar-block w3-small w3-hide-small" style="width:250px">
+		<div class="upload_div w3-bar-item">
+			<input class="upload-btn" type="file" name="uploads[]" multiple="multiple">
+			<div class="progress">
+				<div class="progress-bar" role="progressbar"></div>
+			</div>
+		</div>
+		<% files.forEach(function(file){ %>
+		<ul id="<%= file %>">
+			<li onclick="">
+				<%= file %>	
+			</li>
+		</ul>
+		<% }); %>
+	</div>
+
+	<div class="w3-container">
+
+		
+		<button class="btn btn-primary" type="button">Slide Toggle</button>
+		<pre id="demo" class="prettyprint"></pre>
+	</div>
+
+<script src="script.js"></script>
+<script type="text/javascript" src="prettify.js"></script>
+
+<!--
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sons-of-obsidian"></script>
+-->
+</body>
+</html>
